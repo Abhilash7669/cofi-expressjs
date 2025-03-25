@@ -12,8 +12,8 @@ export const redis = {
                 if (data !== null) return res.send(JSON.parse(data));
                 next();
             } catch (error) {
-                console.error(error);
-                throw new Error(error);
+                console.error("Redis error:", error);
+                res.status(500).send("Internal Server Error");
             }
         }
     },
