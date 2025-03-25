@@ -10,8 +10,7 @@ const app = express();
 
 
 app.use(cors({
-  // origin: [ process.env.DEV_URL, "http://localhost:3000"],
-  origin: ["*"],
+  origin: [ process.env.DEV_URL, "http://localhost:3000"],
   optionsSuccessStatus: 200
 }));
 
