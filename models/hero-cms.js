@@ -8,7 +8,15 @@ const heroSchema = new Schema({
     image: {
         type: String,
         required: true
-    }
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    tag: {
+        type: String,
+        required: true
+    },
 });
 
 export const HeroCMS = model("Hero", heroSchema, "hero");
